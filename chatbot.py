@@ -29,9 +29,12 @@ def message(payload):
           'http://localhost:5005/webhooks/rest/webhook',
           json={"sender": user_id, "message": text})
     response_text = response.json()
+    message_back = ""
+    for r_text in response_text:
+      message_back += r_text['text'] + '\n'
+        
     if user_id != bot:
-      for r_text in response_text:
-        client.chat_postMessage(channel="D0307SZ3S7J", text=r_text['text'])   
+      client.chat_postMessage(channel="D0307SZ3S7J", text=message_back)   
 
 
 

@@ -1,5 +1,4 @@
 version: "3.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -16,7 +15,6 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
 - intent: goodbye
   examples: |
     - cu
@@ -29,7 +27,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -38,7 +35,7 @@ nlu:
     - of course
     - that sounds good
     - correct
-
+    - si
 - intent: deny
   examples: |
     - no
@@ -48,44 +45,61 @@ nlu:
     - don't like that
     - no way
     - not really
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
+    - nah
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+- intent: show_menu
+  examples: |
+    - i'm curious, what's on the menu?
+    - show the menu, please
+    - can you tell me what in the menu/
+    - what can i order?
+    - show menu
+    - what are my options?
+    - what do you have in menu?
+    - whats in the menu
+- intent: thank_you
+  examples: |
+    - thank you 
+    - thx
+    - thanks
+    - tahnks
+    - Thank you 
+    - Thankyou 
+- intent: confirm_open
+  examples: |
+    - is this restaurant open on [wednesday](day) at [10](hour) o'clock
+    - is this restaurant open on [monday](day) at [9](hour) am
+    - is it open on [monday](day) at [12](hour) am
+    - is this place open on [moday](day) at [9](hour) am
+    - are you open on [tuesday](day) at [13](hour) am
+    - is restaurant open on [friday](day) at [7](hour) am
+    - can i order here on [saturday](day) on [12](hour) am
+    - are you open [today](day)
+    - is this place open [today](day)
+    - is this restaurant open on [today](day)
+- intent: place_order
+  examples: |
+    - can i order Tiramisu?
+    - i would love to order Spaghetti Carbonara
+    - can i make the order?
+    - yes, i would like to order Lasagna
+    - yep, i'd love to order Pizza
+    - yes, my order is : 1 Hot-dog and 2 Lasagne
+    - yes, i will order Lasagna
+    - yes, i'll eat Hot-dog
+    - i will order 2 Hot-dogs, 1 Tiramisu and 1 Burger
+    - yes, 1 Tiramisu please
+- intent: additional_requests
+  examples: |
+    - can i get extra [cheese](ingredient) ?
+    - can i add extra [tomato](ingredient) to my meal?
+    - i would love more [ketchup](ingredient), please.
+    - add extra [cheese](ingredient), please
+    - can i ask for more [cheese](ingredient)
+
+

@@ -2,6 +2,11 @@ version: "3.0"
 
 rules:
 
+- rule: Say hi
+  steps:
+  - intent: greet
+  - action: utter_greet
+
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
@@ -11,3 +16,29 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Say 'thank you, too' anytime user says 'thank you'
+  steps:
+  - intent: thank_you
+  - action: utter_thank_you
+
+- rule: Ask "anything else" after each order
+  steps:
+  - intent: place_order
+  - action: action_summarize_order
+
+
+- rule: Show menu whenever client wants you to
+  steps:
+  - intent: show_menu
+  - action: action_show_menu
+
+- rule: Tell if open if user asks
+  steps:
+  - intent: confirm_open 
+  - action: action_confirm_open
+
+# - rule: After each order summarize it
+#   steps:
+#   - intent: place_order
+#   - action: action_summarize_order
