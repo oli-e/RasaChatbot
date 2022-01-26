@@ -3,7 +3,6 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 
-
 intents:
 - greet
 - show_menu
@@ -15,7 +14,7 @@ intents:
 - place_order
 - confirm_open
 - additional_requests
-- receive_adress
+- tells_address
 - delivery
 
 
@@ -23,12 +22,18 @@ forms:
   restaurant_form:
     required_slots:
       - order
+      - address
 
 slots:
   order:
     type: text
     mappings:
       - type: from_text
+  address:
+    type: text
+    mappings:
+      - type: from_text
+
 
 entities:
 - day
@@ -51,13 +56,12 @@ responses:
   - text: "Will you pickup your order or you want us to deliver it to you?"
   utter_ask_address:
   - text: "I have to ask for your delivery address then"
-  utter_confirm_order:
-  - text: "Your meal will be delivered aproximatelly in one hour"
-
-
+  # utter_confirm_order:
+  # - text: "Your meal will be delivered aproximatelly in one hour"
 
 actions:
 - utter_greet
 - action_show_menu
 - action_summarize_order
+- action_address
 - action_confirm_open

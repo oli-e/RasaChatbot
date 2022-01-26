@@ -15,5 +15,5 @@ stories:
   - action: utter_delivery_method
   - intent: delivery
   - action: utter_ask_address
-  - intent: receive_adress
-  - action: utter_confirm_order
+  - intent: tells_address
+  - action: action_address

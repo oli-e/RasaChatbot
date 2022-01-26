@@ -26,7 +26,7 @@ rules:
   steps:
   - intent: place_order
   - action: action_summarize_order
-
+  - active_loop: restaurant_form
 
 - rule: Show menu whenever client wants you to
   steps:
@@ -38,7 +38,12 @@ rules:
   - intent: confirm_open 
   - action: action_confirm_open
 
-# - rule: After each order summarize it
-#   steps:
-#   - intent: place_order
-#   - action: action_summarize_order
+- rule: Ask for adress if client picks delivery method
+  steps:
+  - intent: delivery
+  - action: utter_ask_address
+
+- rule: Ask for adress if client picks delivery method
+  steps:
+  - intent: tells_address
+  - action: action_address

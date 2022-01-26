@@ -85,13 +85,17 @@ nlu:
 - intent: place_order
   examples: |
     - can i order Tiramisu?
-    - i would love to order Spaghetti Carbonara
-    - can i make the order?
+    - can i order Tiramisu with [chocolate cream](ingredient)
+    - i would love to order Spaghetti Carbonara without [eggs](ingredient)
+    - can i make the order? 1 hot-dog with extra [ketchup](ingredient)
     - yes, i would like to order Lasagna
     - yep, i'd love to order Pizza
     - yes, my order is : 1 Hot-dog and 2 Lasagne
+    - yes, my order is : 1 Hot-dog with [mustard](ingredient) and 2 Lasagne
     - yes, i will order Lasagna
+    - yes, i will order Lasagna with extra [cheese](ingredient)
     - yes, i'll eat Hot-dog
+    - yes, i'll eat Hot-dog with no [ketchup](ingredient)
     - i will order 2 Hot-dogs, 1 Tiramisu and 1 Burger
     - yes, 1 Tiramisu please
 - intent: additional_requests
@@ -101,5 +105,19 @@ nlu:
     - i would love more [ketchup](ingredient), please.
     - add extra [cheese](ingredient), please
     - can i ask for more [cheese](ingredient)
-
-
+- intent: delivery
+  examples: |
+    - delivery
+    - bring food to me
+    - i'd ask for delivery
+    - bring me food
+    - i will wait for my meals at home
+    - deliver food, please
+    - i'll pick delivery
+- intent: tells_address
+  examples: |
+    - Krakowska 45/129, 30-567 Krakow
+    - Wroclawska 122/56, 45-678 Wroclaw
+    - Krakowska 34/567, 67-890 Wroclaw
+    - Cicha 46/990, 99-999 Warszawa
+    - Skosna 45, 36-890 Myslenice
